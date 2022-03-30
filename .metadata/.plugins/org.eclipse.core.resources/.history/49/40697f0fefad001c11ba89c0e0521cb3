@@ -1,0 +1,5 @@
+package config.property;
+
+public class file_Reader_Manager {
+
+}

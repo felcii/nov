@@ -1,0 +1,5 @@
+package config.property;
+
+public class config_Reader {
+
+}

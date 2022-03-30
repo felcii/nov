@@ -1,0 +1,10 @@
+package SDP_F;
+
+public class File_Reader_Manager {
+	
+	public Config_Reader get_Instance_CR()
+	{
+		
+	}
+
+}

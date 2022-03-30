@@ -1,0 +1,7 @@
+package SDP_F;
+
+public class Configuration_Reader {
+	
+	public static properties p;
+
+}

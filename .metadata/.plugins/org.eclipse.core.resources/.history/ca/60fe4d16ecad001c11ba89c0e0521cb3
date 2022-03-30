@@ -1,0 +1,21 @@
+package SDP_F;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public Config_Reader {
+	public Config_Reader()
+	{
+	
+	File f = new File("C:\\Users\\DELL\\eclipse-workspace\\Maven_Programs\\src\\main\\java\\SDP_F\\Config.Properties");
+
+	FileInputStream fis = new FileInputStream(f);
+	
+	p = new Properties();
+	
+	p.load(fis);	
+	}
+	
+	public String get_Config_Url() 
+}

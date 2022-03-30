@@ -1,0 +1,60 @@
+package Maven_D_Programs;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class dine_Automation extends Base_Class{
+	
+	public static home_Page hp = new home_Page(driver);
+
+		public static void main(String[] args) {
+			System.setProperty("webdriver.chrome.driver",
+					"C:\\Users\\DELL\\eclipse-workspace\\Selenium\\Driver\\chromedriver.exe");
+			
+			WebDriver driver = new ChromeDriver();
+			driver.get("http://automationpractice.com/index.php");
+			driver.manage().window().maximize();
+			
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+			//signin
+						
+			WebElement login = driver.findElement(By.xpath("//a[@class = 'login']"));
+			login.click();
+			
+			//create account
+			WebElement CreateMail = driver.findElement(By.id("email_create"));
+			CreateMail.sendKeys("ar.dinegautam96@gmail.com");
+			driver.findElement(By.id("SubmitCreate")).click();		
+			
+			//authentication page
+			driver.findElement(By.id("id_gender 1")).click();
+			driver.findElement(By.id("customer_firstname")).sendKeys("Dinesh");
+			driver.findElement(By.id("customer_lastname")).sendKeys("Ram");
+			WebElement password = driver.findElement(By.id("passwd"));
+			password.sendKeys("12345");
+			driver.findElement(By.xpath("//option[@value = '16']")).click();
+			driver.findElement(By.xpath("(//option[@value = '10'])[2]")).click();
+			driver.findElement(By.xpath("//option[@value = '1996']")).click();
+			
+			//address
+			driver.findElement(By.id("company")).sendKeys("SETO Solutions");
+			driver.findElement(By.id("address1")).sendKeys("5, Anipar Mantle");
+			driver.findElement(By.id("address2")).sendKeys("Foxtron");
+			driver.findElement(By.id("city")).sendKeys("Hutchinson");
+			driver.findElement(By.xpath("(//option[@value = '16'])[2]")).click();
+			driver.findElement(By.id("postcode")).sendKeys("67505");
+			driver.findElement(By.id("phone_mobile")).sendKeys("1234567890");
+			driver.findElement(By.id("alias")).sendKeys("My address");
+			driver.findElement(By.id("submitAccount")).click();
+			
+			
+		}
+
+	}
+
+
+

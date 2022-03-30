@@ -1,0 +1,23 @@
+package pom_D_Automation;
+
+import org.openqa.selenium.WebDriver;
+
+public class page_Object_Manager {
+	
+	public WebDriver driver;
+	
+	private home_Page hp;
+	
+	private create_Account ca;
+	
+	private customer_Details cd;
+	
+	private communication_Address ad;
+	
+    public page_Object_Manager(WebDriver driver2) {
+		this.driver = driver2;
+		
+	}
+
+	
+}
